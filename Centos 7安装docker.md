@@ -4,6 +4,10 @@
 
 [官网链接](https://store.docker.com/editions/community/docker-ce-server-centos?tab=description)
 
+[Docer-compose资料](http://blog.csdn.net/yulei_qq/article/details/52984334)
+
+
+
 ## 操作步骤
 
 ### 1. Set up the repository
@@ -41,3 +45,24 @@ Test your installation:
 ```
 sudo docker run hello-world
 ```
+## 4.Install docker-compose
+
+安装python-pip
+
+```
+ yum -y install epel-release
+ yum install python-pip
+```
+
+对安装好的pip进行升级 
+
+```
+ pip install --upgrade pip
+```
+
+安装docker-compose
+
+```
+pip install docker-compose
+```
+
