@@ -38,6 +38,14 @@ Start Docker:
 sudo systemctl start docker
 ```
 
+使doker开机启动
+
+```
+systemctl enable docker
+```
+
+
+
 ### 3. Test your Docker CE installation
 
 Test your installation:
