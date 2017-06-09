@@ -38,6 +38,12 @@ yum install openssh-server
 systemctl start sshd
 ```
 
+设置开机启动
+
+```
+systemctl enable sshd
+```
+
 ## 调整iptables
 
 安装iptables	

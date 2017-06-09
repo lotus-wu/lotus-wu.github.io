@@ -11,7 +11,7 @@ systemctl enable mariadb
 第一次设置下密码
 
 ```
-mysqladmin -uroot passowrd "123456"	 
+mysqladmin -uroot passoword "123456"	 
 ```
 
 访问
