@@ -87,3 +87,12 @@ systemctl enable iptables.service
 　setenforce 0
 ```
 
+## 根据需要卸载firewalld
+
+systemctl start firewalld
+
+systemctl stop firewalld
+
+yum remove firewalld
+
+iptables好像更好用吧？卸载这个
