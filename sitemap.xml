@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/post/centos-7-%E5%AE%89%E8%A3%85mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/centos-7%E5%AE%89%E8%A3%85svn/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/centos7-%E5%AE%89%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/centos-7%E5%AE%89%E8%A3%85docker/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/docker-%E8%BF%90%E8%A1%8Cmysql/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/docker%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%AD%A6%E4%B9%A0/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/%E7%94%A8docker-%E6%90%AD%E5%BB%BAgitlab/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

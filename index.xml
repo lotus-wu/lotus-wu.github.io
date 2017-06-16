@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo tranquilpeak theme</title>
+    <link>/</link>
+    <description>Recent content on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/post/centos-7-%E5%AE%89%E8%A3%85mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/centos-7-%E5%AE%89%E8%A3%85mysql/</guid>
+      <description> CentOS 7 安装Mysql 社区使用mariadb替代了mysql
+yum install mariadb-server mariadb systemctl start mariadb systemctl enable mariadb  第一次设置下密码
+mysqladmin -uroot passoword &amp;quot;123456&amp;quot;	 访问
+mysql -uroot -p  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/centos-7%E5%AE%89%E8%A3%85svn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/centos-7%E5%AE%89%E8%A3%85svn/</guid>
+      <description>CentOS 7安装SVN 操作步骤 参考资料很详细了，不再赘述，备份到了印象笔记。
+参考资料 https://linoxide.com/linux-how-to/install-apache-svn-subversion-centos-7/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/centos7-%E5%AE%89%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/centos7-%E5%AE%89%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>CentOS 7 安装与初始化 更换源  参考：http://mirrors.163.com/.help/centos.html
+ 首先备份/etc/yum.repos.d/CentOS-Base.repo
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup  下载对应版本repo文件, 放入/etc/yum.repos.d/(操作前请做好相应备份)
+wget http://mirrors.163.com/.help/CentOS7-Base-163.repo mv CentOS7-Base-163.repo /etc/yum.repos.d/  运行以下命令生成缓存
+yum clean all yum makecache  安装sshd 安装
+yum install openssh-server  启动
+systemctl start sshd  设置开机启动
+systemctl enable sshd  调整iptables 安装iptables
+yum install iptables-services  修改配置文件
+vi /etc/sysconfig/iptables  添加想开放的端口（如80)
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT  重启防火墙使配置文件生效</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/centos-7%E5%AE%89%E8%A3%85docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/centos-7%E5%AE%89%E8%A3%85docker/</guid>
+      <description>Centos 7安装docker 参考资料 官网链接
+Docer-compose资料
+操作步骤 1. Set up the repository Set up the Docker CE repository on CentOS:
+sudo yum install -y yum-utils sudo yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo sudo yum makecache fast  2. Get Docker CE Install the latest version of Docker CE on CentOS:
+sudo yum -y install docker-ce  Start Docker:
+sudo systemctl start docker  使doker开机启动
+systemctl enable docker  3. Test your Docker CE installation Test your installation:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/docker-%E8%BF%90%E8%A1%8Cmysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/docker-%E8%BF%90%E8%A1%8Cmysql/</guid>
+      <description>Docker 运行Mysql 系统 CentOS 7
+获取镜像 sudo docker pull mysql sudo docker images  运行一个mysql镜像 sudo docker run --name first-mysql -v /data/var/mysql/:/var/lib/mysql -p 3306:3306 -e MYSQL\_ROOT\_PASSWORD=123456 -d mysql  上述命令各个参数含义：
+run 运行一个容器 --name 后面是这个镜像的名称 -p 3306:3306 表示在这个容器中使用3306端口(第二个)映射到本机的端口号也为3306(第一个) -d 表示使用守护进程运行，即服务挂在后台  查看当前运行的容器状态：
+sudo docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES5b6bf6f629bf mysql &amp;quot;docker-entrypoint.sh&amp;quot; 32 hours ago Up 5 hours 0.0.0.0:3306-&amp;gt;3306/tcp first-mysql  想要访问mysql数据库，我的机器上需要装一个mysql-client。
+sudo yum install mysql  下面我们使用mysql命令访问服务器，密码如刚才所示为123456,192.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/docker%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/docker%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%AD%A6%E4%B9%A0/</guid>
+      <description> Docker使用与学习    指令 用途     Docker rmi xxx-id 删除镜像   Docker rm xxx-id 删除容器            </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/readme/</guid>
+      <description>lotus-wu.github.io lotus-wu网络博客</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/%E7%94%A8docker-%E6%90%AD%E5%BB%BAgitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E7%94%A8docker-%E6%90%AD%E5%BB%BAgitlab/</guid>
+      <description>Docker 跑Gitlab 参考资料 大神链接
+使用docker-compose快速启动Gitlab wget https://raw.githubusercontent.com/sameersbn/docker-gitlab/master/docker-compose.yml docker-compose up  或者手动三步走运行GitLab容器 1、运行一个PostgreSQL容器 docker run --name gitlab-postgresql -d \ --env &#39;DB_NAME=gitlabhq_production&#39; \ --env &#39;DB_USER=gitlab&#39; --env &#39;DB_PASS=password&#39; \ --volume /srv/docker/gitlab/postgresql:/var/lib/postgresql \ sameersbn/postgresql:9.4-2  2、运行一个Redis容器 docker run --name gitlab-redis -d \ --volume /srv/docker/gitlab/redis:/var/lib/redis \ sameersbn/redis:latest  3、运行GitLab容器 docker run --name gitlab -d \ --link gitlab-postgresql:postgresql --link gitlab-redis:redisio \ --publish 10022:22 --publish 10080:80 \ --env &#39;GITLAB_PORT=10080&#39; --env &#39;GITLAB_SSH_PORT=10022&#39; \ --volume /srv/docker/gitlab/gitlab:/home/git/data \ sameersbn/gitlab:7.13.1  注意：GitLab应用的启动需要几分钟。</description>
+    </item>
+    
+  </channel>
+</rss>
